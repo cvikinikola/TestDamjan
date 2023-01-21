@@ -201,7 +201,7 @@ namespace UnitTestDamjan
             webDriver.Close();
         }
         [TestMethod]
-        public void FelledLocalStorageChanges()
+        public void FailedLocalStorageChanges()
         {
             //Get selectors
             By problemOrganize = By.CssSelector("#ftco-nav > ul > li:nth-child(2) > a");
@@ -265,7 +265,7 @@ namespace UnitTestDamjan
             Assert.AreNotEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Chestnuts");
         }
         [TestMethod]
-        public void FalledLocalStorageChangesSameSheckboxDoubleClick()
+        public void FailedLocalStorageChangesSameSheckboxDoubleClick()
         {
             //Get selectors
             By problemOrganize = By.CssSelector("#ftco-nav > ul > li:nth-child(2) > a");
@@ -329,7 +329,6 @@ namespace UnitTestDamjan
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergy')"), "Yes");
             Assert.AreNotEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Chestnuts");
 
-            webDriver.Close();
         }
     }
 }
