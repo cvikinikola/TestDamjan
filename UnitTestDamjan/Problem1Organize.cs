@@ -328,6 +328,8 @@ namespace UnitTestDamjan
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('Number_Of_People')"), "21+");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergy')"), "Yes");
             Assert.AreNotEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Chestnuts");
+
+            webDriver.Close();
         }
     }
 }
