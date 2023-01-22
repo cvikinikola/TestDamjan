@@ -54,7 +54,6 @@ namespace UnitTestDamjan
 
             //Comfirm save metod
             webDriver.FindElement(btnOrganize).Click();
-            Thread.Sleep(waitingTime);
             string expectedOrganizerName = "Maja";
             var actualOrganizerName = webDriver.FindElement(confirmOrganizerName);
             Assert.IsTrue(actualOrganizerName.Text.Equals(expectedOrganizerName));
@@ -265,7 +264,7 @@ namespace UnitTestDamjan
             Assert.AreNotEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Chestnuts");
         }
         [TestMethod]
-        public void FailedLocalStorageChangesSameSheckboxDoubleClick()
+        public void FailedLocalStorageChangesSameCheckboxDoubleClick()
         {
             //Get selectors
             By problemOrganize = By.CssSelector("#ftco-nav > ul > li:nth-child(2) > a");
