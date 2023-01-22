@@ -44,11 +44,11 @@ namespace UnitTestDamjan
             Thread.Sleep(waitingTime);
 
             //Enter value in input
-            webDriver.FindElement(organizerName).SendKeys("Maja" + Keys.Tab);
-            webDriver.FindElement(birthdayName).SendKeys("Nikola" + Keys.Tab);
-            webDriver.FindElement(age).SendKeys("38" + Keys.Tab);
-            webDriver.FindElement(when).SendKeys("05/20/2023" + Keys.Tab);
-            webDriver.FindElement(time).SendKeys("08:00PM" + Keys.Tab);
+            webDriver.FindElement(organizerName).SendKeys("Maja");
+            webDriver.FindElement(birthdayName).SendKeys("Nikola");
+            webDriver.FindElement(age).SendKeys("38");
+            webDriver.FindElement(when).SendKeys("05/20/2023");
+            webDriver.FindElement(time).SendKeys("08:00PM");
             webDriver.FindElement(persons21).Click();
             webDriver.FindElement(alergiesNo).Click();
 
@@ -112,11 +112,11 @@ namespace UnitTestDamjan
             Thread.Sleep(waitingTime);
 
             //Enter value in input and compare with local storage
-            webDriver.FindElement(organizerName).SendKeys("Maja" + Keys.Tab);
-            webDriver.FindElement(birthdayName).SendKeys("Nikola" + Keys.Tab);
-            webDriver.FindElement(age).SendKeys("3" + Keys.Tab);
-            webDriver.FindElement(when).SendKeys("05/23/2023" + Keys.Tab);
-            webDriver.FindElement(time).SendKeys("08:20PM" + Keys.Tab);
+            webDriver.FindElement(organizerName).SendKeys("Maja");
+            webDriver.FindElement(birthdayName).SendKeys("Nikola");
+            webDriver.FindElement(age).SendKeys("3");
+            webDriver.FindElement(when).SendKeys("05/23/2023");
+            webDriver.FindElement(time).SendKeys("08:20PM");
             webDriver.FindElement(persons11).Click();
             webDriver.FindElement(alergiesMaybe).Click();
             webDriver.FindElement(chestnutsAlergies).Click();
@@ -279,6 +279,7 @@ namespace UnitTestDamjan
             By alergiesMaybe = By.Id("alg_m");
             By alergiesYes = By.Id("alg_y");
             By chestnutsAlergies = By.Id("alg2");
+            By wallnutsAlergies = By.Id("alg1");
             By btnOrganize = By.CssSelector("body > section.ftco-section.ftco-no-pt.ftco-no-pb > div > div > div.col-md-7.ftco-animate.makereservation.p-4.p-md-5.fadeInUp.ftco-animated > form > div > div.col-md-12.mt-3 > div > p > a");
 
             IWebDriver webDriver = new ChromeDriver();
@@ -319,6 +320,7 @@ namespace UnitTestDamjan
             webDriver.FindElement(time).SendKeys("08:00PM");
             webDriver.FindElement(alergiesYes).Click();
             webDriver.FindElement(chestnutsAlergies).Click();
+            webDriver.FindElement(wallnutsAlergies).Click();
 
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('Organizer')"), "Maja Radovic");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('Birthday_Person')"), "Nikola Radovic");
@@ -327,7 +329,7 @@ namespace UnitTestDamjan
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('Time')"), "20:00");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('Number_Of_People')"), "21+");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergy')"), "Yes");
-            Assert.AreNotEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Chestnuts");
+            Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Wallnuts");
 
         }
     }
