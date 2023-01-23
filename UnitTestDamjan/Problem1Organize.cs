@@ -158,11 +158,11 @@ namespace UnitTestDamjan
             Thread.Sleep(waitingTime);
 
             //Enter value in input and compare with local storage
-            webDriver.FindElement(organizerName).SendKeys("Maja" + Keys.Tab);
-            webDriver.FindElement(birthdayName).SendKeys("Nikola" + Keys.Tab);
-            webDriver.FindElement(age).SendKeys("3" + Keys.Tab);
-            webDriver.FindElement(when).SendKeys("05/23/2023" + Keys.Tab);
-            webDriver.FindElement(time).SendKeys("08:20PM" + Keys.Tab);
+            webDriver.FindElement(organizerName).SendKeys("Maja");
+            webDriver.FindElement(birthdayName).SendKeys("Nikola");
+            webDriver.FindElement(age).SendKeys("3");
+            webDriver.FindElement(when).SendKeys("05/23/2023");
+            webDriver.FindElement(time).SendKeys("08:20PM");
             webDriver.FindElement(persons11).Click();
             webDriver.FindElement(alergiesMaybe).Click();
             webDriver.FindElement(chestnutsAlergies).Click();
@@ -225,11 +225,11 @@ namespace UnitTestDamjan
             Thread.Sleep(waitingTime);
 
             //Enter value in input and compare with local storage
-            webDriver.FindElement(organizerName).SendKeys("Maja" + Keys.Tab);
-            webDriver.FindElement(birthdayName).SendKeys("Nikola" + Keys.Tab);
+            webDriver.FindElement(organizerName).SendKeys("Maja");
+            webDriver.FindElement(birthdayName).SendKeys("Nikola");
             webDriver.FindElement(age).SendKeys("3" + Keys.Tab);
-            webDriver.FindElement(when).SendKeys("05/23/2023" + Keys.Tab);
-            webDriver.FindElement(time).SendKeys("08:20PM" + Keys.Tab);
+            webDriver.FindElement(when).SendKeys("05/23/2023");
+            webDriver.FindElement(time).SendKeys("08:20PM");
             webDriver.FindElement(persons11).Click();
             webDriver.FindElement(alergiesMaybe).Click();
             webDriver.FindElement(chestnutsAlergies).Click();
@@ -242,8 +242,6 @@ namespace UnitTestDamjan
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('Number_Of_People')"), "11-20");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergy')"), "Maybe");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Chestnuts");
-
-
 
             webDriver.FindElement(organizerName).SendKeys(" Radovic");
             webDriver.FindElement(birthdayName).SendKeys(" Radovic");
@@ -290,11 +288,11 @@ namespace UnitTestDamjan
             Thread.Sleep(waitingTime);
 
             //Enter value in input and compare with local storage
-            webDriver.FindElement(organizerName).SendKeys("Maja" + Keys.Tab);
-            webDriver.FindElement(birthdayName).SendKeys("Nikola" + Keys.Tab);
-            webDriver.FindElement(age).SendKeys("3" + Keys.Tab);
-            webDriver.FindElement(when).SendKeys("05/23/2023" + Keys.Tab);
-            webDriver.FindElement(time).SendKeys("08:20PM" + Keys.Tab);
+            webDriver.FindElement(organizerName).SendKeys("Maja");
+            webDriver.FindElement(birthdayName).SendKeys("Nikola");
+            webDriver.FindElement(age).SendKeys("3");
+            webDriver.FindElement(when).SendKeys("05/23/2023");
+            webDriver.FindElement(time).SendKeys("08:20PM");
             webDriver.FindElement(persons11).Click();
             webDriver.FindElement(alergiesMaybe).Click();
             webDriver.FindElement(chestnutsAlergies).Click();
@@ -307,8 +305,6 @@ namespace UnitTestDamjan
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('Number_Of_People')"), "11-20");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergy')"), "Maybe");
             Assert.AreEqual((String)jse.ExecuteScript("return localStorage.getItem('alergies')"), "Chestnuts");
-
-
 
             webDriver.FindElement(organizerName).SendKeys(" Radovic");
             webDriver.FindElement(birthdayName).SendKeys(" Radovic");
