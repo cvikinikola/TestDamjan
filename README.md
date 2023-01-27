@@ -4,4 +4,4 @@
  Da biste pokrenuli projekt iz GitHuba, prvo trebate ga preuzeti na računar koristeći Git komandu "git clone" i URL adresu projekta sa GitHubu. Nakon što ste preuzeli    projekt, trebali biste otvoriti projekat u  Visual studio 2017/19/22. <br>
 Visual studio 2017/19/22 kliknete u menu dugme Test pa Test Explorer <br>
 U prozorcetu test explorer na UnitTestDamjan desni klik pa Run selected Test i sacekate da odradi testiranje<br>
-<b>NOTE:</b> Mislim da bi bilo pozeljno da se i Alergije pojavljuju u potvrdi 
+<b>NOTE:</b> Mislim da bi bilo pozeljno da se i Alergije pojavljuju u potvrdi, godina moze biti negativna i datum proslave u proslosti ali to nije bio deo testa pa nisam radio
